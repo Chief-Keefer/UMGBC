@@ -1,0 +1,48 @@
+h1 {
+	background-color: lavender;
+	width: 50%;
+}
+
+img {
+	width: 300px;
+	height: 300px;
+	border: 10px solid pink;
+}
+
+p {
+	width: 75%;
+	min-width: 500px;
+}
+
+section {
+	width: 200px;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+button {
+	background-color: blue;
+	font-size: 2rem;
+	color: white;
+	padding: 0.2em 0.7em;
+	border-radius: 10px;
+}
+
+#container {
+	border: 1px solid black;
+	width: 500px;
+	margin: 0 auto;
+}
+
+#container .item {
+	height: 100px;
+	border: 1px solid orangered;
+	box-sizing: border-box;
+	margin: 1em 2em;
+	
+}
+
+#container .item:hover {
+	border: 10px solid olive;
+	outline: 10px solid lightblue;
+}

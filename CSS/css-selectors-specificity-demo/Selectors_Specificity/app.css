@@ -1,0 +1,47 @@
+#logo {
+	width: 75px;
+}
+img {
+	width: 300px;
+}
+
+h1 {
+	color: red;
+}
+
+h2 {
+	color: purple;
+}
+
+.poem {
+	width: 500px;
+}
+
+.poem p {
+	font-style: italic;
+}
+
+.poem > p {
+	color: black;
+	font-style: normal;
+}
+
+nav a:hover {
+	color: orangered;
+	text-decoration: underline;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+input:focus {
+	background-color: pink;
+}
+
+.poem section p:first-of-type:first-letter {
+	font-size: 2em;
+}
+img[src*="unsplash"] {
+	width: 200px;
+}
