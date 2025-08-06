@@ -1,10 +1,29 @@
 body {
-    text-align: center;
     background-color: #453c3c;
+}
+
+#counter {
+    position: absolute; 
+    left: 35%;
+    
 }
 
 button {
     width: 125px;
     height: 50px;
     background-color: green;
+    display: block;
+    margin: auto;
+}
+
+#card-container {
+    margin-top: 50px;
+}
+
+img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;  
+    
 }
