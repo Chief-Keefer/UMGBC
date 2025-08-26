@@ -15,6 +15,7 @@ class Tree {
   /** sumValues(): add up all of the values in the tree. */
 
   sumValues() {
+    if (!this.root) return 0;
     const values = [];
     let curr = this.root;
     const stack = [curr];
@@ -31,6 +32,7 @@ class Tree {
   /** countEvens(): count all of the nodes in the tree with even values. */
 
   countEvens() {
+    if (!this.root) return 0;
     const values = [];
     let curr = this.root;
     const stack = [curr];
@@ -48,6 +50,7 @@ class Tree {
    * whose value is greater than lowerBound. */
 
   numGreater(lowerBound) {
+    if (!this.root) return 0;
     const values = [];
     let curr = this.root;
     const stack = [curr];
