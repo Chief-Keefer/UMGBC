@@ -20,7 +20,7 @@ class BinaryTree {
     if (!this.root) return 0;
 
     let depth = 0;
-    const queue = [{ node: this.root, depth: 0 }];
+    const queue = [{ node: this.root, depth: 1 }];
 
     while (queue.length) {
       const { node, depth: currentDepth } = queue.shift();
@@ -49,7 +49,7 @@ class BinaryTree {
     if (!this.root) return 0;
 
     let depth = 0;
-    const queue = [{ node: this.root, depth: 0 }];
+    const queue = [{ node: this.root, depth: 1 }];
 
     while (queue.length) {
       const { node, depth: currentDepth } = queue.shift();
@@ -72,13 +72,23 @@ class BinaryTree {
 
   maxSum(node = this.root) {
     if (!node) return 0;
+    let maxSum = this.root.val;
 
-    // Calculate the maximum sum of left and right subtrees
-    const leftSum = this.maxSum(node.left);
-    const rightSum = this.maxSum(node.right);
+    function findMaxPath(node) {
+      if (!node) return 0;
 
-    // Return the maximum of the current node's value plus the sums of its subtrees
-    return node.val + Math.max(leftSum, rightSum);
+      const leftMax = Math.max(findMaxPath(node.left), 0);
+      const rightMax = Math.max(findMaxPath(node.right), 0);
+
+      // Update the global maximum sum if needed
+      maxSum = Math.max(maxSum, node.val + leftMax + rightMax);
+
+      // Return the maximum path sum including the current node
+      return node.val + Math.max(leftMax, rightMax);
+    }
+
+    findMaxPath(node);
+    return maxSum;
   }
 
   /** nextLarger(lowerBound): return the smallest value in the tree
